@@ -14,3 +14,6 @@ halopesa.o: halopesa.c mainmenu.h
 
 menu.o: menu.c
 	gcc -c menu.c
+
+clean:
+	rm *.o main
