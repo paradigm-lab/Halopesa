@@ -5,7 +5,7 @@
 
 
 main: halopesa.o menu.o
-	gcc halopesa.o menu.o -o main
+	gcc -o halopesa.o menu.o main
 
 halopesa.o: halopesa.c
 	gcc -c halopesa.c
