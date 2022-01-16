@@ -4,6 +4,8 @@
 #	action
 
 
+all: main
+
 main: halopesa.o menu.o
 	gcc halopesa.o menu.o -o main
 
