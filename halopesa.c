@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include "menu.c"
+
+void mainmenu();
+
 int main() {
 	printf("Welcome to HaloPesa");
 
