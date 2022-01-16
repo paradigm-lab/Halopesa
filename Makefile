@@ -1,0 +1,4 @@
+# -*- MakeFile -*-
+
+#target: dependencies
+#	action
