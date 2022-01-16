@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include "mainmenu.h"
 
-void mainmenu();
 
 int main() {
 	printf("Welcome to HaloPesa");
