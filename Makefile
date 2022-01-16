@@ -16,4 +16,4 @@ menu.o: menu.c
 	gcc -c menu.c
 
 clean:
-	rm *.o main
+	rm -f *.o main
