@@ -1,3 +1,3 @@
 void mainmenu();
 void tumapesa();
-int phonenumber[10];
+//int phonenumber[10];
