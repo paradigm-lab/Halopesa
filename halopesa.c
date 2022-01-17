@@ -3,6 +3,5 @@
 
 
 int main() {
-	printf("Welcome to HaloPesa");
-
+	mainmenu();
 }
