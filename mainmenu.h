@@ -1,1 +1,2 @@
 void mainmenu();
+void tumapesa();
