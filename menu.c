@@ -1,5 +1,5 @@
 #include <stdio.h> 
-
+#include "mainmenu.h"
 
 void mainmenu() {
 	printf("\t \t \t \tWelcome to Halopesa \n");
@@ -19,6 +19,6 @@ void mainmenu() {
 
 	switch(input) {
 		case 1:
-			tumapesa();
+			//tumapesa();
 	}
 }
