@@ -40,7 +40,7 @@ clean:
 	rm -rf $(BINARY) $(OBJECTS) $(DEPFILES)
 
 diff: 
-	$(info The status of the repository, and the volume of pre-file changes:)
+	$(info The status of the repository, and the volume of per-file changes:)
 	@git status
 	@git diff --stat
 
