@@ -19,6 +19,9 @@ void mainmenu() {
 
 	switch(input) {
 		case 1:
-			//tumapesa();
+			tumapesa();
+			break;
+		default:
+			printf("Jaribu tena");
 	}
 }
