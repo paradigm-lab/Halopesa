@@ -3,20 +3,23 @@
 #target: dependencies
 #	action
 
+CC=gcc
+OPT=-O0
+CFLAGS=-c
 
 all: main
 
 main: halopesa.o menu.o tumapesa.o
-	gcc halopesa.o menu.o tumapesa.o -o main
+	$(CC) halopesa.o menu.o tumapesa.o -o main
 
 halopesa.o: halopesa.c mainmenu.h
-	gcc -c halopesa.c
+	$(CC) $(CFLAGS) halopesa.c
 
 menu.o: menu.c mainmenu.h
-	gcc -c menu.c
+	$(CC) $(CFLAGS) menu.c
 
 tumapesa.o: tumapesa.c
-	gcc -c tumapesa.c
+	$(CC) $(CFLAGS) tumapesa.c
 
 clean:
 	rm -f *.o main
