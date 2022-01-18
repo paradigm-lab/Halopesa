@@ -4,12 +4,14 @@
 #	action
 
 CC=gcc
+INCDIRS=-I.
 OPT=-O0
-CFLAGS=-c
+CFLAGS=-Wall -Wextra -g $(INCDIRS) $(OPT)
 
 
 CFILES=halopesa.c menu.c tumapesa.c
 OBJECTS=halopesa.o menu.o tumapesa.o
+HEADERS=mainmenu.h 
 
 BINARY=bin
 
@@ -17,16 +19,12 @@ all: $(BINARY)
 
 
 $(BINARY): $(OBJECTS)
-	$(CC) halopesa.o menu.o tumapesa.o -o bin
+	$(CC) -o $@ $^
 
-halopesa.o: halopesa.c mainmenu.h
-	$(CC) $(CFLAGS) halopesa.c
 
-menu.o: menu.c mainmenu.h
-	$(CC) $(CFLAGS) menu.c
-
-tumapesa.o: tumapesa.c
-	$(CC) $(CFLAGS) tumapesa.c
+# Regular Expression where % is a wildward
+%.o:%.c %.h 
+	$(CC) $(CFLAGS) -c -o $@ $^
 
 clean:
 	rm -rf $(BINARY) $(OBJECTS)
