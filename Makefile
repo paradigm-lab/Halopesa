@@ -39,6 +39,10 @@ $(BINARY): $(OBJECTS)
 clean:
 	rm -rf $(BINARY) $(OBJECTS) $(DEPFILES)
 
+# Shell commands are a set of keystrokes away
+distribute: clean
+	tar zcvf dist.tgz *
+
 diff: 
 	$(info The status of the repository, and the volume of per-file changes:)
 	@git status
