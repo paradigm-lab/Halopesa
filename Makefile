@@ -3,17 +3,26 @@
 #target: dependencies
 #	action
 
-CC=gcc
-INCDIRS=-I.
-OPT=-O0
-CFLAGS=-Wall -Wextra -g $(INCDIRS) $(OPT)
-
-
-CFILES=halopesa.c menu.c tumapesa.c
-OBJECTS=halopesa.o menu.o tumapesa.o
-HEADERS=mainmenu.h 
-
 BINARY=bin
+CODEDIRS=. lib
+INCDIRS=. ./include/ #can be list
+
+CC=gcc
+OPT=-O0
+
+#Generate files that encode make rules for the .h dependencies
+DEPFLAGS=-MP -MD
+
+#Automatically add the -I onto each include directory
+CFLAGS=-Wall -Wextra -g $(foreach D,$(INCDIRS),-I$(D)) $(OPT) $(DEPFLAGS)
+
+# For-style iteration (foreach) and regular expression completion (Wildcard)
+CFILES=$(foreach D, $(CODEDIRS), $(wildcard $(D)/*.c))
+
+# Regular expression replacement
+OBJECTS=$(patsubst %.c, %.o, $(CFILES))
+DEPFILES=$(patsubst %.c, %.d, $(CFILES))
+
 
 all: $(BINARY)
 
@@ -23,8 +32,9 @@ $(BINARY): $(OBJECTS)
 
 
 # Regular Expression where % is a wildward
-%.o:%.c %.h 
-	$(CC) $(CFLAGS) -c -o $@ $^
+# Only want the .c file dependency here, thus $< instead of $^
+%.o:%.c
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	rm -rf $(BINARY) $(OBJECTS)
+	rm -rf $(BINARY) $(OBJECTS) $(DEPFILES)
