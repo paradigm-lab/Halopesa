@@ -29,4 +29,4 @@ tumapesa.o: tumapesa.c
 	$(CC) $(CFLAGS) tumapesa.c
 
 clean:
-	rm -rf $(BINARY) *.o
+	rm -rf $(BINARY) $(OBJECTS)
