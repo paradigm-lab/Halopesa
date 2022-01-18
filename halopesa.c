@@ -18,7 +18,7 @@ int main() {
 	}
 	else {
 
-		if (phonenumber) {
+		if (phonenumber == phonenumber) {
 			printf("Enter phone number: ");
 			for (int i = 0; i < size; i++) {
 				scanf("%d", &phonenumber[i]);
