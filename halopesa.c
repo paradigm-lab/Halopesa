@@ -22,7 +22,7 @@ int main() {
 	FILE *fp;
 
 	// Defining the file name 
-	char filename[50];
+	char filename[10], phone[10], pword[50];
 
 	// Declaring the opt variable to check for the user option
 	int opt;
@@ -59,6 +59,26 @@ int main() {
 			printf("\n \n Account succesfully registered");
 		} else {
 			printf("\n \n Something went wrong please try again");
+		}
+		fclose(fp);
+	}
+
+	if (opt == 2) {
+		system("clear");
+		printf("\n Ingiza number ya simu: \t");
+		scanf("%s", phone);
+		printf("Password: \t");
+		scanf("%s", pword);
+
+		strcpy(filename, phone);
+		fp = fopen(strcat(filename, ".no"), "r");
+		fread(&mteja, sizeof(struct user), 1, fp);
+		fclosa(fp);
+
+		if(!strcmp(pword, mteja.password)) {
+			printf("\n Password matched");
+		} else {
+			printf("\n Invalid password");
 		}
 	}
 
