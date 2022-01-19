@@ -11,3 +11,4 @@ void tumaPesa();
 void kutoaPesa();
 void vochaKifurushi();
 void lipiaBili();
+void lipiaBidhaa();
