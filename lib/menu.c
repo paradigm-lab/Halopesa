@@ -19,9 +19,34 @@ void mainmenu() {
 
 	switch(input) {
 		case 1:
-			tumapesa();
+			tumaPesa();
+			break;
+		case 2:
+			kutoaPesa();
+			break;
+		case 3:
+			vochaKifurushi();
+			break;
+		case 4:
+			lipiaBili();
+			break;
+		case 5:
+			lipiaBidhaa();
+			break;
+		case 6:
+			playWin();
+			break;
+		case 7:
+			haloYako();
+			break;
+		case 8:
+			tumaBank();
+			break;
+		case 9:
+			akauntiYangu();
 			break;
 		default:
 			printf("Jaribu tena");
+			break;
 	}
 }
