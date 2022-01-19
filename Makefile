@@ -46,5 +46,5 @@ distribute: clean
 diff: 
 	$(info The status of the repository, and the volume of per-file changes:)
 	@git status
-	@git diff --stat
+	@git diff 
 
