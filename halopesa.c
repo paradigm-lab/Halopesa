@@ -40,7 +40,12 @@ int main() {
 	 * which is to register the user 
 	 */	
 	if (opt == 1) {
+		// Using the system function to clear out the screen
 		system("clear");
+	
+		/*
+		 *  Getting input from the user for the phone number and password
+		 */	
 		printf("Ingiza number ya simu: \t");
 		scanf("%s", mteja.phone);
 		printf("Ingiza number la siri: \t");
@@ -73,6 +78,8 @@ int main() {
 	 */
 
 	if (opt == 2) {
+
+		// Using the system function to clear out the screen
 		system("clear");
 
 		/*
