@@ -92,7 +92,7 @@ int main() {
 		 * Checking if the file is null 
 		 */
 		if (fp == NULL) {
-			printf("\n Phone number not registered");
+			printf("\n Namba yako ya simu haija sajiliwa"); 
 		}	
 
 		// Opening the file in reading mode 
