@@ -12,3 +12,4 @@ void kutoaPesa();
 void vochaKifurushi();
 void lipiaBili();
 void lipiaBidhaa();
+void playWin();
