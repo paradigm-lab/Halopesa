@@ -9,3 +9,4 @@
 void mainmenu();
 void tumaPesa();
 void kutoaPesa();
+void vochaKifurushi();
