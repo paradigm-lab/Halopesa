@@ -15,3 +15,4 @@ void lipiaBidhaa();
 void playWin();
 void haloYako();
 void tumaBank();
+void akauntiYangu();
