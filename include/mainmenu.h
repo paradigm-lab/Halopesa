@@ -1,3 +1,11 @@
+/*
+ *  The function prototype for the Halopesa 
+ *  		OR 
+ *  The header file for the Halopesa
+ *
+ */
+
+
 void mainmenu();
-void tumapesa();
-//int phonenumber[10];
+void tumaPesa();
+void kutoaPesa();
