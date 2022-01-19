@@ -14,6 +14,8 @@ struct user {
 };
 
 int main() {
+	// Declaring the char continue variable 
+	char cont = 'y';
 
 	// The instance of the struct
 	struct user mteja;
@@ -110,14 +112,16 @@ int main() {
 
 			// Comparing the user input password and the password in the file
 			if(!strcmp(pword, mteja.password)) {
-				printf("\n Password matched");
-			} else {
+				while (cont == 'y') {
+					system("clear");
+					mainmenu();
+				}
+			} 
+			else {
 				printf("\n Invalid password");
 			}
 		}
 	}
-
 	
-	mainmenu(); 
 	return 0;
 }
