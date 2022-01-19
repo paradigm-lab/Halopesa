@@ -14,3 +14,4 @@ void lipiaBili();
 void lipiaBidhaa();
 void playWin();
 void haloYako();
+void tumaBank();
