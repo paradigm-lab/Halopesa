@@ -31,10 +31,14 @@ int main() {
 	printf("1. Register an account \n");
 	printf("2. Login to an account \n \n");
 
+	// Checking for the user input 
 	printf("Your choice: \t");
 	scanf("%d", &opt);
-	
-	// Checking for the user input 
+
+	/*
+	 * Checking for the first input from the user
+	 * which is to register the user 
+	 */	
 	if (opt == 1) {
 		system("clear");
 		printf("Ingiza number ya simu: \t");
@@ -63,23 +67,41 @@ int main() {
 		fclose(fp);
 	}
 
+	/*
+	 *  Checking the second input from the user
+	 *  Which is the login option
+	 */
+
 	if (opt == 2) {
 		system("clear");
+
+		/*
+		 * Asking the user for the input the phone number and the password 
+		 */
 		printf("\n Ingiza number ya simu: \t");
 		scanf("%s", phone);
-		printf("Password: \t");
+		printf("Ingiza neno la siri: \t");
 		scanf("%s", pword);
 
 		strcpy(filename, phone);
+
+		// Opening the file into read mode but using the strcat function to read the file
 		fp = fopen(strcat(filename, ".no"), "r");
 
+		/*
+		 * Checking if the file is null 
+		 */
 		if (fp == NULL) {
 			printf("\n Phone number not registered");
 		}	
 
+		// Opening the file in reading mode 
 		fread(&mteja, sizeof(struct user), 1, fp);
+
+		// Closing the file
 		fclosa(fp);
 
+		// Comparing the user input password and the password in the file
 		if(!strcmp(pword, mteja.password)) {
 			printf("\n Password matched");
 		} else {
