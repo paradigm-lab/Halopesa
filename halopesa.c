@@ -15,7 +15,10 @@ struct user {
 
 int main() {
 
+	// The instance of the struct
 	struct user mteja;
+
+
 	mainmenu(); 
 	return 0;
 }
