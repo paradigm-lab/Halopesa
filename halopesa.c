@@ -72,6 +72,11 @@ int main() {
 
 		strcpy(filename, phone);
 		fp = fopen(strcat(filename, ".no"), "r");
+
+		if (fp == NULL) {
+			printf("\n Phone number not registered");
+		}	
+
 		fread(&mteja, sizeof(struct user), 1, fp);
 		fclosa(fp);
 
