@@ -108,7 +108,7 @@ int main() {
 			fread(&mteja, sizeof(struct user), 1, fp);
 
 			// Closing the file
-			fclosa(fp);
+			fclose(fp);
 
 			// Comparing the user input password and the password in the file
 			if(!strcmp(pword, mteja.password)) {
