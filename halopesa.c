@@ -93,19 +93,20 @@ int main() {
 		 */
 		if (fp == NULL) {
 			printf("\n Namba yako ya simu haija sajiliwa"); 
-		}	
+		} else {	
 
-		// Opening the file in reading mode 
-		fread(&mteja, sizeof(struct user), 1, fp);
+			// Opening the file in reading mode 
+			fread(&mteja, sizeof(struct user), 1, fp);
 
-		// Closing the file
-		fclosa(fp);
+			// Closing the file
+			fclosa(fp);
 
-		// Comparing the user input password and the password in the file
-		if(!strcmp(pword, mteja.password)) {
-			printf("\n Password matched");
-		} else {
-			printf("\n Invalid password");
+			// Comparing the user input password and the password in the file
+			if(!strcmp(pword, mteja.password)) {
+				printf("\n Password matched");
+			} else {
+				printf("\n Invalid password");
+			}
 		}
 	}
 
