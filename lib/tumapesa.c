@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "halopesa.h"
 
 // Function prototype
 void kwendaHalopesa();
@@ -51,5 +51,6 @@ void kamaVocha() {
 }
 
 void nyuma() {
-	printf("Nyuma");
+	system("clear");
+	mainmenu();
 }
