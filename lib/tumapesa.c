@@ -10,26 +10,26 @@ void nyuma();
 
 void tumaPesa() {
 
-	int userInput;
+	char userInput;
 
 	printf("1. Kwenda Halopesa \n");
 	printf("2. Kwenda Mitandao Mingine \n");
 	printf("3. Kama Vocha \n");
 	printf("# Nyuma \n");
 
-	scanf("%s", &userInput);
+	scanf(" %c", &userInput);
 
 	switch (userInput) {
-		case "1":
+		case '1':
 			kwendaHalopesa();
 			break;
-		case "2":
+		case '2':
 			kwendaMitandaoMingine();
 			break;
-		case "3":
+		case '3':
 			kamaVocha();
 			break;
-		case "#":
+		case '#':
 			nyuma();
 			break;
 		default:
