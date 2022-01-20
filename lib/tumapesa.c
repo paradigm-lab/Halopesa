@@ -17,21 +17,23 @@ void tumaPesa() {
 	printf("3. Kama Vocha \n");
 	printf("# Nyuma \n");
 
-	scanf("%d", &userInput);
+	scanf("%s", &userInput);
 
 	switch (userInput) {
-		case 1:
+		case "1":
 			kwendaHalopesa();
 			break;
-		case 2:
+		case "2":
 			kwendaMitandaoMingine();
 			break;
-		case 3:
+		case "3":
 			kamaVocha();
 			break;
-		case #:
+		case "#":
 			nyuma();
 			break;
+		default:
+			printf("Jaribu tena");
 	}
 
 }
