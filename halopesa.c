@@ -112,10 +112,8 @@ int main() {
 
 			// Comparing the user input password and the password in the file
 			if(!strcmp(pword, mteja.password)) {
-				while (cont == 'y') {
 					system("clear");
 					mainmenu();
-				}
 			} 
 			else {
 				printf("\n Invalid password");
