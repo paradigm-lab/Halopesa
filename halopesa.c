@@ -14,8 +14,6 @@ struct user {
 };
 
 int main() {
-	// Declaring the char continue variable 
-	char cont = 'y';
 
 	// The instance of the struct
 	struct user mteja;
