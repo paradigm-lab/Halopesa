@@ -5,10 +5,11 @@
 void kwaWakala();
 void umojaAtm();
 void selcomPos();
+void wakalaWaVisa();
 
 void kutoaPesa() {
 
-	char useInput;
+	char userInput;
 
 	printf("1. Kwa wakala \n");
 	printf("2. UMOJA ATM \n");
@@ -19,14 +20,14 @@ void kutoaPesa() {
 
 	switch (userInput) {
 	
-		case '1':
-			kutoaPesa();
-			break;
-		case '2':
+		case '1':	
 			kwaWakala();
 			break;
-		case '3':
+		case '2':
 			umojaAtm();
+			break;
+		case '3':
+			wakalaWaVisa();
 			break;
 		case '4':
 			selcomPos();
@@ -36,20 +37,20 @@ void kutoaPesa() {
 			break;
 		default:
 			printf("Jaribu tena");
-			
-
-		
+			break;	
 	}
 }
 
 
 
-void kutoaPesa() {
-	printf("Kutoa Pesa");
-}
 
 void kwaWakala() {
 	printf("Kwa wakala");
+}
+
+
+void wakalaWaVisa() {
+	printf("Kwa wakala Wa visa");
 }
 
 void umojaAtm() {
