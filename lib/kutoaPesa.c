@@ -2,6 +2,7 @@
 #include "halopesa.h"
 
 
+void nyuma();
 void kwaWakala();
 void umojaAtm();
 void selcomPos();
@@ -59,4 +60,9 @@ void umojaAtm() {
 
 void selcomPos() {
 	printf("Seclom POS");
+}
+
+void nyuma() {
+	system("clear");
+	mainmenu();
 }
