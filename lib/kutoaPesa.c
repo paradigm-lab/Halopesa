@@ -1,5 +1,61 @@
 #include <stdio.h>
+#include "halopesa.h"
+
+
+void kwaWakala();
+void umojaAtm();
+void selcomPos();
 
 void kutoaPesa() {
-	printf("Kutoa Pesa menu");
+
+	char useInput;
+
+	printf("1. Kwa wakala \n");
+	printf("2. UMOJA ATM \n");
+	printf("3. Wakala wa visa \n");
+	printf("4. Selcom POS \n");
+	printf("#. Nyuma \n");
+	scanf("%c", &userInput);
+
+	switch (userInput) {
+	
+		case '1':
+			kutoaPesa();
+			break;
+		case '2':
+			kwaWakala();
+			break;
+		case '3':
+			umojaAtm();
+			break;
+		case '4':
+			selcomPos();
+			break;
+		case '#':
+			nyuma();
+			break;
+		default:
+			printf("Jaribu tena");
+			
+
+		
+	}
+}
+
+
+
+void kutoaPesa() {
+	printf("Kutoa Pesa");
+}
+
+void kwaWakala() {
+	printf("Kwa wakala");
+}
+
+void umojaAtm() {
+	printf("Wakala Wa Visa");
+}
+
+void selcomPos() {
+	printf("Seclom POS");
 }
