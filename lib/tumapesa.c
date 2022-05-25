@@ -7,7 +7,7 @@
 void kwendaHalopesa();
 void kwendaMitandaoMingine();
 void kamaVocha();
-void nyuma();
+// void nyuma();
 
 
 void tumaPesa() {
@@ -32,7 +32,7 @@ void tumaPesa() {
 			kamaVocha();
 			break;
 		case '#':
-			nyuma();
+			system("clear");
 			break;
 		default:
 			printf("Jaribu tena");
@@ -51,8 +51,9 @@ void kwendaMitandaoMingine() {
 void kamaVocha() {
 	printf("Kama Vocha");
 }
-
+/*
 void nyuma() {
 	system("clear");
 	mainmenu();
 }
+*/
