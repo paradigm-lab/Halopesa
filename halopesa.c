@@ -63,8 +63,8 @@ int main() {
 		 * Using the if else condtion to check for the existence of the file if is null
 		 */
 		fp = fopen(strcat(filename, ".no"), "w");
-		fwrite(&mteja, sizeof(struct user), 1, fp);
-		if (fwrite != 0) {
+		int success = fwrite(&mteja, sizeof(struct user), 1, fp);
+		if (success != 0) {
 			printf("\n \n Account succesfully registered");
 		} else {
 			printf("\n \n Something went wrong please try again");
